@@ -1,0 +1,15 @@
+{
+  "name": "17_mongoose_framework",
+  "version": "1.0.0",
+  "description": "Making a connection between NodeJs and MongoDB",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hrittik Singh",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^8.2.3",
+    "validator": "^13.11.0"
+  }
+}

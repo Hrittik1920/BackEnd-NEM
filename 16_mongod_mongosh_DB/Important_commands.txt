@@ -1,0 +1,68 @@
+mongod --version     // To check the version of currend MongoDB DataBase
+
+mongosh              // ***To start the mongo shell 
+
+show dbs             // Will show all the database located in the system
+
+use dataBaseName     // If not present then create it and make it active database, otherwise make it active database
+
+cls                  // To clear the mongo shell
+
+.exit | quit()       // To exit from the mongo Shell or we can also double tap CLtr + C
+
+db                   // show current database you are in 
+
+show collections     // show all the collections in the current database
+
+
+                -> ********************** INSERTION OPERATION IN MONGO SHELLL *************************** <-
+
+db.collection_Name.insertOne({name : "Hrittik Singh", uniRoll : 11700121015, age : 22, college : "RCCIIT"})
+                     // By using that we can insert a single data in collection of current database
+
+db.collection_Name.insertMany([ {}, {}, {} ])
+                     // By using that we can insert as many data in collection of current database by passing it in array format
+
+
+
+                -> ************************* READ OPERATION IN MONGO SHELLL *************************** <-
+
+db.collection_Name.find()        // show all the documents in the collection of current database
+
+db.collection_Name.find().pretty()       // show all the documens in the collection in a prettier way:)
+
+db.collection_Name_find(<filter>,<projection).limit(1).skip(1)
+        -> db.mydata.find({college : "RCCIIT"}, {name : 1, _id : 0}).limit(1).skip(1)
+                      // By this we can filter the data, and see the specific fields we want to see via projection, and set the limit 
+                         and ever skip the first occurance according to our need
+
+
+
+                -> ********************** UPDATION OPERATION IN MONGO SHELLL *************************** <-
+
+db.collection_Name.updateOne({_id : 2}, { $set : {name : "changed_Name"}})
+                      // We can update a single data by this method
+
+db.collection_Name.updateMany({_id : 2}, { $set : {name : "changed_Name"}})
+                      // We can update multiple data documents who match the createria
+
+
+
+                -> ********************** DELETION OPERATION IN MONGO SHELLL *************************** <-
+
+db.collection_Name.deleteOne({_id : 2})
+                      // This will delete only the first document whose match the filter
+
+db.collection_Name.updateMany({_id : 2})
+                      // This will delete all the documents whose value match with the filter
+
+db.collection_Name.updateMany({})
+                      // This will delete all the data documents from the collection of our current database
+
+
+
+
+
+
+
+
