@@ -1,0 +1,1 @@
+console.log("Hey we are serving the whole JS file here!");
